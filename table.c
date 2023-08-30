@@ -1,23 +1,19 @@
 #include<stdio.h>
 #include<conio.h>
-/* Program : To find table of the given number.
+/* Program : To find table from 1 to 10.
 */
 int main()
 {
-    int num,x;
-    x=1;
+ int r,c,t;
 
-    printf("\n\tEnter a number:\t");
-    scanf("%d",&num);
-
-    printf("\n\tTable of: \t%d",num);
-
-    while(x<=10)
+ for(r=1; r<=10; r++)
+ {
+    printf("\n\t Table of %d \n",r);
+    for(c=1; c<=10; c++)
     {
-        printf("\n\t%d x %d = %d\n",num,x,(num*x));
-        x=x+1;
+        t=r*c;
+        printf("\n\t %d X %d = %d\n",r,c,t);
     }
-
-
-    return(0);
+ }   
+ return(0);   
 }

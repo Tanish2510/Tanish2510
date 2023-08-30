@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h> // For system("command")
-/*Determining Even or Odd.*/
 
 void clrscr()      // For clearing
 {
@@ -9,24 +8,23 @@ void clrscr()      // For clearing
     return;
 }
 
-int num(int a)
+float simple(float a, float b, float c)
 {
-    return a%2;
+    return a*b*c /100;
 }
 
 void menu(void)
 {
     int op;
-    int n=120;
-    
+    float p=1000,r=10,t=10,si;
 
     do
     {
-        //clrscr(); // optionl
+        clrscr(); // optionl
 
-        printf("\n\t\t\t\t Even Odd");
-        printf("\n\t\t\t 1.Evaluate");
-        printf("\n\t\t\t 2.Change Number");
+        printf("\n\t\t\t\t Simple interest");
+        printf("\n\t\t\t 1.Calculate and show");
+        printf("\n\t\t\t 2.Change P R and T");
         printf("\n\t\t\t 3.Exit");
         printf("\n\t\t\t Enter choice number:");
         scanf("%d",&op);
@@ -34,19 +32,17 @@ void menu(void)
         switch(op)
         {
          case 1 :
-            if(num(n)==0)
-            {
-                printf("\n\t Even Number");
-            }
-            else
-            {
-                printf("\n\t Odd Number");
-            }
+            si=simple(p,r,t);
+
+            printf("\n P  : %g",p);
+            printf("\n R  : %g",r);
+            printf("\n T  : %g",t);
+            printf("\n SI : %g",si);
             fflush(stdin); getch();
             break;
          case 2 :
-            printf("\n Enter Number :");
-            scanf("%d",&n);
+            printf("\n Enter P R and T :");
+            scanf("%f%f%f",&p,&r,&t);
             break;
          case 3 :
             printf("\n Bye-Bye");
@@ -55,9 +51,7 @@ void menu(void)
             printf("\n Invalid input!");
             break;
         }
-  
     } while (op!=3);
-    
 }
 
 int main()

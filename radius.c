@@ -1,32 +1,35 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h> // For system("command")
-/*Determining Even or Odd.*/
-
+/* Calculating area and circumference of a circle.*/
 void clrscr()      // For clearing
 {
     system("cls");
     return;
 }
 
-int num(int a)
+float area(float a)
 {
-    return a%2;
+    return 3.14*a*a;
+}
+
+float circum(float a)
+{
+    return 2.0*3.14*a;
 }
 
 void menu(void)
 {
     int op;
-    int n=120;
-    
-
+    float r,c,a;
+    printf("\n Enter radius:");
+    scanf("%f",&r);
     do
     {
-        //clrscr(); // optionl
-
-        printf("\n\t\t\t\t Even Odd");
-        printf("\n\t\t\t 1.Evaluate");
-        printf("\n\t\t\t 2.Change Number");
+        printf("\n\t\t\t\t CIRCLE");
+        printf("\n\t\t\t 1.Calculate and show area");
+        printf("\n\t\t\t 1.Calculate and show circumference");
+        printf("\n\t\t\t 2.Change R");
         printf("\n\t\t\t 3.Exit");
         printf("\n\t\t\t Enter choice number:");
         scanf("%d",&op);
@@ -34,19 +37,17 @@ void menu(void)
         switch(op)
         {
          case 1 :
-            if(num(n)==0)
-            {
-                printf("\n\t Even Number");
-            }
-            else
-            {
-                printf("\n\t Odd Number");
-            }
+            a=area(r);
+            c=circum(r);
+
+            printf("\n Radius         : %g",r);
+            printf("\n Area           : %g",a);
+            printf("\n Circumference  : %g",c);
             fflush(stdin); getch();
             break;
          case 2 :
-            printf("\n Enter Number :");
-            scanf("%d",&n);
+            printf("\n Enter Radius :");
+            scanf("%f",&r);
             break;
          case 3 :
             printf("\n Bye-Bye");
@@ -55,7 +56,6 @@ void menu(void)
             printf("\n Invalid input!");
             break;
         }
-  
     } while (op!=3);
     
 }
