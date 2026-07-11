@@ -16,7 +16,7 @@ Developed robust Java-based microservices and AI-driven developer tools at IBM u
 
 💞️ Looking to collaborate on: Open-source backend infrastructure, enterprise-grade AI integrations, and high-performance cloud deployments.
 
-📫 Let's connect: tanish.rai2510@gmail.com | LinkedIn
+📫 Let's connect: tanish.rai2510@gmail.com | https://www.linkedin.com/in/tanish-rai-165a89270/
 
 Languages & Tools:
 
